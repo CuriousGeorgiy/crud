@@ -186,7 +186,9 @@ function crud.init_storage()
     sharding_metadata.init()
     readview.init()
 
-    _G._crud.storage_info_on_storage = utils.storage_info_on_storage
+    utils.init_storage_call('storage_info_on_storage',
+        utils.storage_info_on_storage
+    )
 end
 
 function crud.init_router()
